@@ -129,7 +129,11 @@ def A_Star(grid, start, goal):
     g_value = {start: 0}
 
     def heuristic(a, b):
-        return abs(a[0] - b[0]) + abs(a[1] - b[1])  # Manhattan Distance: it is good for grids without diagonal movements
+        """
+        Manhattan Distance: 
+        it is good for grids without diagonal movements
+        """
+        return abs(a[0] - b[0]) + abs(a[1] - b[1])  
 
     while open_list:
         _, current = heapq.heappop(open_list)
