@@ -17,9 +17,9 @@ class Grid:
         self.width = width
         self.height = height
         self.obstacle_prob = obstacle_prob
-        self.grid = self._generate_grid()
+        self.grid = self.generate_grid()
 
-    def _generate_grid(self):
+    def generate_grid(self):
         """
         Terrain types:
         1 = road (cost 1)
